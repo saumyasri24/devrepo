@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#151515 ;
+    color:wheat;
+    font-family: sans-serif;
+}
+div span{
+    display: none;
+}
+.line{
+    position: relative;
+    top:50%;
+    width: 12em;
+    margin: 0 auto;
+    border-right: 2px solid rgb(255,255,255,0.8);
+    font-size: 4em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+.anime{
+    animation: typewriter 6s steps(40) 1 normal forwards,
+               blinktextcursor .5s steps(40) infinite normal;
+}
+@keyframes typewriter{
+    0%{
+        width: 0;
+    }
+    40%{
+        width:12em;
+    }
+    60%{
+        width:12em;
+    }
+    100%{
+        width: 0;
+    }
+
+}
+@keyframes blinktextcursor{
+    from{
+        border-right-color: rgb(255,255,255,0.8) ;
+    }
+    to{
+        border-right-color:transparent;
+    }
+}
